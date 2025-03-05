@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/bgImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bus_and_girl"
+        android:alpha="0.3"/>
+
+    <!-- Semi-transparent Overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AA000000"/> <!-- 66% Black Transparent Overlay -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@android:color/transparent">
+
+            <!-- Active Users Count -->
+            <TextView
+                android:id="@+id/txtActiveUsers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active Users: Parents - 0, Drivers - 0"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:padding="10dp" />
+
+            <!-- List of Drivers -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Drivers List"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:padding="10dp"
+                android:gravity="center"/>
+
+            <ListView
+                android:id="@+id/listDrivers"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:divider="@android:color/darker_gray"
+                android:dividerHeight="1dp"
+                android:background="@android:color/white"
+                android:padding="10dp"/>
+
+            <!-- List of Students -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Students List"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:padding="10dp"
+                android:gravity="center"/>
+
+            <ListView
+                android:id="@+id/listStudents"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:divider="@android:color/darker_gray"
+                android:dividerHeight="1dp"
+                android:background="@android:color/white"
+                android:padding="10dp"/>
+
+            <!-- Selected Student Details -->
+            <LinearLayout
+                android:id="@+id/studentDetailsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/txtStudentName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Student Name: -"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:padding="5dp"/>
+
+                <TextView
+                    android:id="@+id/txtParentContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Parent Contact: -"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:padding="5dp"/>
+
+                <Button
+                    android:id="@+id/btnCallParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Call Parent"
+                    android:backgroundTint="@color/brown"
+                    android:textColor="@android:color/white"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+            <!-- Selected Driver Details -->
+            <LinearLayout
+                android:id="@+id/driverDetailsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/txtDriverName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Driver Name: -"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:padding="5dp"/>
+
+                <TextView
+                    android:id="@+id/txtDriverLicense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="License Number: -"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:padding="5dp"/>
+
+                <TextView
+                    android:id="@+id/txtDriverStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Status: Active"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:padding="5dp"/>
+            </LinearLayout>
+
+            <!-- Logout Button -->
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:backgroundTint="@color/brown"
+                android:textColor="@android:color/white"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

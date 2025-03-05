@@ -632,6 +632,14 @@ public class MapsActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        admin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MapsActivity.this, admin.class);
+                startActivity(intent);
+            }
+        });
+
 
         // Setup Toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -649,7 +657,6 @@ public class MapsActivity extends AppCompatActivity {
         inflater.inflate(R.menu.menu_withoutroute, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
