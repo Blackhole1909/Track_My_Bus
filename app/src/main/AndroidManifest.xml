@@ -3,6 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kkwbustracking">
 
+    <!-- Declare telephony feature as not required -->
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -37,10 +40,10 @@
         <activity android:name=".driver_login" />
         <activity android:name=".driver_tracklocation" />
         <activity android:name=".about" />
+        <activity android:name=".admin" />
         <activity android:name=".Splash_Screen" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
